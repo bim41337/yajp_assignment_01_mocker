@@ -2,10 +2,11 @@ package de.oth.mocker;
 
 import net.sf.cglib.proxy.*;
 import java.util.HashMap;
+import java.util.Map;
 
 public class Mocker {
 
-	private static HashMap<Integer, MockingInterceptor> objectInterceptorStorage = new HashMap<>();
+	private static Map<Integer, MockingInterceptor> objectInterceptorStorage = new HashMap<>();
 
 	@SuppressWarnings("unchecked")
 	private static <T> T getProxyObject(Class<T> clazz, MockingInterceptor interceptor) {

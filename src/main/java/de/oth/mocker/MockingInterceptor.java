@@ -4,12 +4,13 @@ import net.sf.cglib.proxy.*;
 import java.lang.reflect.Array;
 import java.lang.reflect.Method;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Map.Entry;
 
 public class MockingInterceptor implements MethodInterceptor {
 
 	// Attributes
-	private HashMap<Method, HashMap<Object[], Integer>> history;
+	private Map<Method, HashMap<Object[], Integer>> history;
 	private boolean isVerification;
 	private VerificationInformation verificationInfo;
 
